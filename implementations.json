@@ -507,7 +507,7 @@
               "notes": "WebTransport endpoint"
             },
             {
-              "url": "moqt://fb.mvfst.net:9448",
+              "url": "moqt://fb.mvfst.net:9448/moq-relay",
               "transport": "quic",
               "tls_disable_verify": true,
               "notes": "Raw QUIC endpoint"

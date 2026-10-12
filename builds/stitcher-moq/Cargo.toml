@@ -4,10 +4,12 @@ version = "0.2.0"
 edition = "2021"
 
 [dependencies]
-# moq-tokio 0.19.20 / moq-net 0.3.8 is the moq-relay 0.16.0 release train (2026-09-30). It carries
-# moq-dev #4195, which stops refusing an EXPIRES parameter in SUBSCRIBE_OK (libquicr and aiomoqt
-# send one). moq-tokio re-exports moq-net. Paramount's relay runs moq-relay 0.15.8.
-moq-tokio = "0.19.20"
+# moq-tokio 0.19.24 / moq-net 0.3.11 is the moq-relay 0.17.3 release train (2026-10-11). It carries
+# moq-dev #5094: a draft-22 LOCATION_FILTER carries its Location Filter Type. moq-net 0.3.10 and
+# older publish at draft-22 in the old layout, which a 0.17.3 relay refuses. It also keeps moq-dev
+# #4195 (EXPIRES in SUBSCRIBE_OK accepted). moq-tokio re-exports moq-net. Paramount's relay runs
+# moq-relay 0.17.3.
+moq-tokio = "0.19.24"
 rustls = { version = "0.23", default-features = false, features = ["aws-lc-rs"] }
 tokio = { version = "1", features = ["full"] }
 clap = { version = "4", features = ["derive", "env"] }
